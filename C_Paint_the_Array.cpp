@@ -37,7 +37,6 @@ void solve()
             if((v[j]%v[i]==0 and v[j-1]%v[i]!=0) || (v[j]%v[i]!=0 and v[j-1]%v[i]==0))
             cnt++;
         }
-       // cout<<cnt<<endl;
         if(cnt==n-1)
         {
             ans  = v[i];
