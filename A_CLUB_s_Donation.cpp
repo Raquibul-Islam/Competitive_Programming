@@ -24,7 +24,7 @@ using namespace std;
   
 void solve()
  {
-    ll n,sum=0,x;
+    ll n,sum=0,x;;
     cin>>n;
     for(int i=0; i<n; i++)
     {
