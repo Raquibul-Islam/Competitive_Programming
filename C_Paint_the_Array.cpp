@@ -28,13 +28,13 @@ void solve()
     ll n,ans,cnt=0;
     cin>>n;
      Vector v(n);
-     for(int i=0; i<n; i++)
+     for(ll i=0; i<n; i++)
      cin>>v[i];
-     for(int i=0; i<n; i++)
+     for(ll i=0; i<n; i++)
      {
-        for(int j=1; j<n; j++)
+        for(ll j=1; j<n; j++)
         {
-            if((v[i]%v[j]==0 and v[i]%v[j-1]!=0) || (v[i]%v[j]!=0 and v[i]%v[j-1]==0))
+            if((v[j]%v[i]==0 and v[j-1]%v[i]!=0) || (v[j]%v[i]!=0 and v[j-1]%v[i]==0))
             cnt++;
         }
        // cout<<cnt<<endl;

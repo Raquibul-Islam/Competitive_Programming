@@ -24,6 +24,9 @@ using namespace std;
   
 void solve()
  {
+
+      git remote add <Codeforces> <https://github.com/Sazzad57/Problem-Solving.git> 
+
     ll n,sum=0,x;;;;;
     cin>>n;
     for(int i=0; i<n; i++)
