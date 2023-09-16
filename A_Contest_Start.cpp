@@ -24,11 +24,31 @@ using namespace std;
   
 void solve()
  {
-    ll n,t,x;
+    ll n,t,x,ans=0;
     cin>>n>>x>>t;
-    
-    
-   cout<<(max(0(ll), n-t/x)* (t/x) + min(n-1,t/x-1)* min(n,t/x)/2(ll))<<endl; 
+
+    ll a = t/x;
+    if(x>t)
+    {
+       cout<<0<<endl;
+       return;
+    }
+  if(x==t)
+    {
+       cout<<n-1<<endl;
+       return;
+    }
+  if(a>=n)
+    {
+     cout<<(n*(n-1))/2<<endl;
+        
+    }
+    else{
+     ll z = n-a;
+     ans += z*a;
+     ans+=(a*(a-1)/2);
+     cout<<ans<<endl;
+    }
     
  }
  
