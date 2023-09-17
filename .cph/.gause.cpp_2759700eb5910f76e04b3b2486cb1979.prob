@@ -1,1 +1,0 @@
-{"name":"Local: gause","url":"d:\\Codeforce\\gause.cpp","tests":[{"id":1693798970479,"input":"3.0 -0.1 -0.2 7.85\t\t\n0.1 7.0 -0.3 -19.3\t\t\t\t\t\t0.3 -0.2 10.0 71.4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforce\\gause.cpp","group":"local","local":true}

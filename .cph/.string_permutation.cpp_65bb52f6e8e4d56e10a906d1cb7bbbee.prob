@@ -1,1 +1,0 @@
-{"name":"Local: string_permutation","url":"d:\\Codeforce\\string_permutation.cpp","tests":[{"id":1693592143613,"input":"aybabtu","output":""},{"id":1693592171671,"input":"ab","output":""},{"id":1693592177790,"input":"abc","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforce\\string_permutation.cpp","group":"local","local":true}
