@@ -24,10 +24,35 @@ using namespace std;
   
 void solve()
 {
-    long long n;
-    cin>>n;
-    long long tmp = sqrt(n-1);
-    cout<<tmp<<endl;
+    string s;
+    cin>>s;
+    ll ans =0, cnt=1;
+    char tmp ;
+    if(s[0] == 'B')
+    {
+        tmp = 'B';
+    }
+    else
+    tmp = 'A';
+    for(int i=1; i<s.size(); i++)
+    {
+
+
+        if(s[i]==tmp)
+        {
+            cnt++;
+        
+        }
+        else
+        {
+            ans+=cnt;
+            cnt =0;
+            tmp = 'B';
+
+        }
+    }
+        
+    cout<<ans<<endl;
     
 }
  
@@ -39,3 +64,13 @@ int main()
      while(t--)
      solve();
 }
+
+ ll n;
+    vector<pair<int, int>>vp;
+    for (int i=0; i<n; i++)
+    {   
+         ll a,b;
+         vp.push_back({a,b});
+    }
+    for (auto &v : vp)
+        v.first;

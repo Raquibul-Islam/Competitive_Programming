@@ -24,18 +24,39 @@ using namespace std;
   
 void solve()
 {
-    long long n;
+    ll n, cnt=1, ans=0;
     cin>>n;
-    long long tmp = sqrt(n-1);
-    cout<<tmp<<endl;
-    
+     ll arra[n], arrb[n];
+   
+    for (int i=0; i<n; i++)
+    {   
+         
+        cin>>arra[i];
+        cin>>arrb[i];
+    }
+  
+    for (int i=1; i<n; i++)
+    {   
+         if(arra[i] == arra[i-1] and arrb[i]== arrb[i-1])
+         cnt++;
+         else
+         {
+             ans = max(cnt, ans);
+             cnt = 1;
+         }
+        
+
+       
+    }
+    cout<<max(cnt, ans)<<endl;
+   
 }
  
 int main()
 {
      fast;    
      int t=1;
-     cin>>t;
+    // cin>>t;
      while(t--)
      solve();
 }

@@ -24,11 +24,32 @@ using namespace std;
   
 void solve()
 {
-    long long n;
-    cin>>n;
-    long long tmp = sqrt(n-1);
-    cout<<tmp<<endl;
     
+   ll n;
+   cin>>n;
+   Vector arr(n+1), arra(n+1);
+
+   for (int i=1; i<=n; i++)
+   {
+     cin>>arr[i];
+   }
+  
+   if(arr[1]!=n)
+   {
+    cout<<"NO"<<endl;
+     return;
+   }
+   for(ll i = 1 ; i <= n ; i++) {
+            arra[arr[i]]++;
+         }
+         for(ll i = n-1 ; i >= 1 ; i--) {
+            arra[i] += arra[i+1];
+         }
+         if(arra == arr)
+            cout<<"YES"<<endl;
+         else
+            cout<<"NO"<<endl;;
+     
 }
  
 int main()

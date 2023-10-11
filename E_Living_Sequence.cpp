@@ -24,10 +24,25 @@ using namespace std;
   
 void solve()
 {
-    long long n;
+    ll n,tmp,i=0,rem=0;
+    int  arr[15];
     cin>>n;
-    long long tmp = sqrt(n-1);
-    cout<<tmp<<endl;
+   while(n!=0)
+   {
+      tmp = n%9;
+      arr[i] = tmp;
+      n = n/9;
+      i++;
+      rem++;
+   }
+   for(int ii=rem-1; ii>=0; ii--)
+   {
+     if(arr[ii]<=3)
+     cout<<arr[ii];
+     else
+     cout<<arr[ii]+1;
+   } 
+   cout<<endl;
     
 }
  

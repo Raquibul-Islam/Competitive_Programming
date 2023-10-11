@@ -24,10 +24,22 @@ using namespace std;
   
 void solve()
 {
-    long long n;
+    ll n,pos;
+    string s,ans="";
     cin>>n;
-    long long tmp = sqrt(n-1);
-    cout<<tmp<<endl;
+    while(n--)
+    {
+         cin>>s>>pos;
+         if(pos<=s.size())
+         {
+            ans+=s[pos-1];
+         }
+         else
+         {
+            
+         }
+
+    }
     
 }
  

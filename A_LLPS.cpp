@@ -24,18 +24,23 @@ using namespace std;
   
 void solve()
 {
-    long long n;
-    cin>>n;
-    long long tmp = sqrt(n-1);
-    cout<<tmp<<endl;
     
+    string v;
+    cin >> v;
+    sort(all(v));
+    reverse(all(v));
+    for(int i=0; i<v.size(); i++)
+    {
+        cout << v[i];
+        if(v[i]!=v[i+1]) break;
+    }
 }
  
 int main()
 {
      fast;    
      int t=1;
-     cin>>t;
+     //cin>>t;
      while(t--)
      solve();
 }

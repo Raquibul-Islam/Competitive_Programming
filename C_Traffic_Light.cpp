@@ -24,11 +24,43 @@ using namespace std;
   
 void solve()
 {
-    long long n;
-    cin>>n;
-    long long tmp = sqrt(n-1);
-    cout<<tmp<<endl;
     
+  ll n,ans=0,i,up;
+    char c;
+    cin>>n>>c;
+    string s;
+    cin>>s;
+    if(c=='g')
+    {
+        cout<<0<<endl;
+        return;
+    }
+    s+=s;
+    Vector v;
+     for ( i=0; i<2*n; i++)
+    {
+        if(s[i]=='g')
+        {
+            v.push_back(i);
+        }
+    }
+
+
+    for ( i=0; i<n; i++)
+    {
+        if(s[i]==c)
+        {
+             up = upper_bound(v.begin(), v.end(), i)-v.begin(); 
+             ans = max(ans, v[up]-i);
+        }
+       
+    }
+     
+     
+
+    cout<<ans<<endl;
+
+
 }
  
 int main()
