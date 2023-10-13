@@ -1,0 +1,1 @@
+{"name":"Local: prc","url":"e:\\CPP\\prc.cpp","tests":[{"id":1697019884264,"input":"2\n5\n3 6\n1 2 3 4 5\n11\n11 20\n16 11 4 14 7 6 16 9 17 16 8","output":"Case 1: 6\nCase 2: 19"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CPP\\prc.cpp","group":"local","local":true}
