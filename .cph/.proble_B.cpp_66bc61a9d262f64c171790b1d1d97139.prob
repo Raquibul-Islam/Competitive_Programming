@@ -1,0 +1,1 @@
+{"name":"Local: proble_B","url":"e:\\CPP\\proble_B.cpp","tests":[{"id":1697194540789,"input":"2\n5 3\n3 5 12 15 21\n3 1\n3 3 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CPP\\proble_B.cpp","group":"local","local":true}
