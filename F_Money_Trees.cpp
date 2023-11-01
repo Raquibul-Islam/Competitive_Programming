@@ -24,19 +24,38 @@ using namespace std;
   
 void solve()
 {
-    ll n,k,ans=0;
+    ll n,k,ans=0, sum;
     cin>>n>>k;
     Vector f(n),h(n);
     for (int i=0; i<n; i++)
         cin>>f[i];
-    
-    for (int i=0; i<n; i++)
-        cin>>h[i];
 
-    for (int i=1; i<n; i++)
-    {
-           if()
-    }
+         for (int i=0; i<n; i++)
+          cin>>h[i];
+    
+    ll r = 0, l = 0;
+      sum = f[0];
+     if (sum <= k)
+          ans = 1;
+     for (r = 1; r < n; r++)
+     {
+          if (h[r - 1] % h[r] == 0)
+               sum += f[r];
+          else
+          {
+               l = r;
+               sum = f[r];
+          }
+          while (sum > k)
+          {
+               sum -= f[l];
+               l++;
+          }
+          ans = max(ans, r - l + 1);
+     }
+     cout << ans <<endl;
+
+   
     
 }
  
