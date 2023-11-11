@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-    ll n,m, k;
+    ll n,m;
     cin >> n >> m;
     ll sum=m;
     vector < ll > v;

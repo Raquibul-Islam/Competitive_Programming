@@ -1,0 +1,1 @@
+{"name":"Local: help_sabrin","url":"e:\\CPP\\help_sabrin.cpp","tests":[{"id":1699635234016,"input":"4\n107\n654\n999\n54","output":"430\n1102\n942\n600"},{"id":1699635528263,"input":"6\n11\n25\n9\n64\n100\n27","output":"46\n70\n30\n96\n130\n54"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CPP\\help_sabrin.cpp","group":"local","local":true}
