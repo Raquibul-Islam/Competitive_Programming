@@ -24,24 +24,21 @@ using namespace std;
   
 void solve()
 {
-    int a,b,c;
-    cin>>a>>b>>c;
-    if(a==b)
-   {
-     cout<<c<<endl;
-     return;
-   }
-     if(a==c)
-   {
-     cout<<b<<endl;
-     return;
-   }
-     if(c==b)
-   {
-     cout<<a<<endl;
-     return;
-   }
     
+    string s;
+    bool ok = false;
+    cin>>s;
+    for (int i=1; i<s.size(); i++)
+    {
+        if(s[i]=='t' and s[i-1]=='i')
+        {
+            ok = true;
+        }
+    }
+    if (ok)
+    cout<<"YES"<<endl;
+    else
+    cout<<"NO"<<endl;
 }
  
 int main()

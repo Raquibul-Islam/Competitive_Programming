@@ -24,23 +24,19 @@ using namespace std;
   
 void solve()
 {
-    int a,b,c;
-    cin>>a>>b>>c;
-    if(a==b)
-   {
-     cout<<c<<endl;
-     return;
-   }
-     if(a==c)
-   {
-     cout<<b<<endl;
-     return;
-   }
-     if(c==b)
-   {
-     cout<<a<<endl;
-     return;
-   }
+    ll n,k;
+    cin>>n>>k;
+    ll total = (n*(n-1))/2;
+    if(k>=n)
+    cout<<1<<endl;
+    else
+    {
+          if(total-k>=n)
+          cout<<n<<endl;
+          else
+          cout<<total-k+1<<endl;
+    }
+
     
 }
  

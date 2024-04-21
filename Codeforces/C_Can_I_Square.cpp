@@ -24,24 +24,19 @@ using namespace std;
   
 void solve()
 {
-    int a,b,c;
-    cin>>a>>b>>c;
-    if(a==b)
-   {
-     cout<<c<<endl;
-     return;
-   }
-     if(a==c)
-   {
-     cout<<b<<endl;
-     return;
-   }
-     if(c==b)
-   {
-     cout<<a<<endl;
-     return;
-   }
     
+    ll n,x,sum=0;
+    cin>>n;
+    for (int i=1; i<=n; i++)
+    {
+        cin>>x;
+        sum+=x;
+    }
+    ll tmp = sqrt(sum);
+    if(tmp*tmp==sum)
+    cout<<"YES"<<endl;
+    else
+    cout<<"NO"<<endl;
 }
  
 int main()

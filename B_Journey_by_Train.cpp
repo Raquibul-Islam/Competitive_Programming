@@ -21,34 +21,47 @@ using namespace std;
 #define     PI              3.1415926535897
  
  //--------------------RAW CODE--------------------
-  
+void depth_first_search(int st, int len, int ls, vector<int>& pb, vector<vector<int>>& gp, int& ans) {
+   
+    ans = max(ans, len);
+    int temp;
+    for (int temp : gp[st]) {
+        if (pb[temp] > ls) {
+           depth_first_search(temp, len + 1, pb[temp], pb, gp, ans);
+        }
+    }
+}
 void solve()
 {
-    int a,b,c;
-    cin>>a>>b>>c;
-    if(a==b)
-   {
-     cout<<c<<endl;
-     return;
-   }
-     if(a==c)
-   {
-     cout<<b<<endl;
-     return;
-   }
-     if(c==b)
-   {
-     cout<<a<<endl;
-     return;
-   }
+
+    int n,ss;
+    cin>>n>>ss;
+    vector<int> pb(n + 1);
+    for (int i = 1; i <= n; ++i) {
+        cin >> pb[i];
+    }
+
+    vector<vector<int>> gp(n + 1);
+    for (int i = 1; i < n; ++i) {
+        int x,y;
+        cin>>x>>y;
+        gp[x].push_back(y);
+        gp[y].push_back(x);
+    }
+
+    int ans = 0;
+    depth_first_search(ss, 1, pb[ss], pb, gp, ans);
+    cout << ans << endl;
+
+
     
 }
- 
+
 int main()
 {
      fast;    
      int t=1;
-     cin>>t;
+    // cin>>t;
      while(t--)
      solve();
 }

@@ -24,31 +24,34 @@ using namespace std;
   
 void solve()
 {
-    int a,b,c;
-    cin>>a>>b>>c;
-    if(a==b)
-   {
-     cout<<c<<endl;
-     return;
-   }
-     if(a==c)
-   {
-     cout<<b<<endl;
-     return;
-   }
-     if(c==b)
-   {
-     cout<<a<<endl;
-     return;
-   }
     
+    ll n,k;
+   
+    cin>>n>>k;
+     Vector v(n);
+    for(int i=0; i<n; i++)
+        cin>>v[i];
+        if(k==2)
+        {
+              cout<<max(v[0], v[n-1])<<endl;
+        return;
+        }
+      
+
+        sort(v.begin(), v.end());
+        if(k==1)
+        cout<<v[0]<<endl;
+        else
+        cout<<v[n-1]<<endl;
+    
+
 }
  
 int main()
 {
      fast;    
      int t=1;
-     cin>>t;
+     //cin>>t;
      while(t--)
      solve();
 }

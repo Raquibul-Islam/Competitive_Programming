@@ -24,23 +24,16 @@ using namespace std;
   
 void solve()
 {
-    int a,b,c;
-    cin>>a>>b>>c;
-    if(a==b)
-   {
-     cout<<c<<endl;
-     return;
-   }
-     if(a==c)
-   {
-     cout<<b<<endl;
-     return;
-   }
-     if(c==b)
-   {
-     cout<<a<<endl;
-     return;
-   }
+
+    int n;
+    cin>>n;
+    string s="";
+    char ch = n;
+    ch  = ch ;
+    s+=ch;
+    cout<<s[0]-48<<endl;
+
+    
     
 }
  

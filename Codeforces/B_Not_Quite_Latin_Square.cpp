@@ -24,23 +24,34 @@ using namespace std;
   
 void solve()
 {
-    int a,b,c;
-    cin>>a>>b>>c;
-    if(a==b)
-   {
-     cout<<c<<endl;
-     return;
-   }
-     if(a==c)
-   {
-     cout<<b<<endl;
-     return;
-   }
-     if(c==b)
-   {
-     cout<<a<<endl;
-     return;
-   }
+    string s ="",x;
+    map<int, char>mp;
+    for (int i=0; i<3; i++)
+    {
+        cin>>x;
+        s+=x;   
+    }
+    sort(s.begin(),s.end());
+    for (int i=0; i<9; i++)
+    {
+         mp[s[i]]++;
+    }
+    if(mp['A']!=3)
+    {
+         cout<<"A"<<endl;
+        return;
+    }
+     if(mp['B']!=3)
+    {
+         cout<<"B"<<endl;
+        return;
+    }
+     if(mp['C']!=3)
+    {
+         cout<<"C"<<endl;
+        return;
+    }
+   
     
 }
  

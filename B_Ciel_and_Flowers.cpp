@@ -24,31 +24,22 @@ using namespace std;
   
 void solve()
 {
-    int a,b,c;
-    cin>>a>>b>>c;
-    if(a==b)
-   {
-     cout<<c<<endl;
-     return;
-   }
-     if(a==c)
-   {
-     cout<<b<<endl;
-     return;
-   }
-     if(c==b)
-   {
-     cout<<a<<endl;
-     return;
-   }
     
+    ll r,g,b,mm=0;
+    cin>>r>>g>>b;Vector v(3);
+    v[0]=r,v[1]=g,v[2]=b;
+    sort(v.begin(), v.end());
+    ll ans = (r/3 + g/3 + b/3) + (min({r%3, g%3, b%3}));   
+    ll mn = min({r,g,b});
+    mm  = (mn-1)+((v[1]-(v[0]-1))/3)+((v[2]-v[0]+1)/3);
+    cout<<max({ans,mn,mm})<<endl;  
 }
  
 int main()
 {
      fast;    
      int t=1;
-     cin>>t;
+    // cin>>t;
      while(t--)
      solve();
 }
