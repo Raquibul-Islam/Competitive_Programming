@@ -24,25 +24,13 @@ using namespace std;
   
 void solve()
 {
-    string s;
-    cin>>s;
-    ll cnt=0,ans=0;
-    for (int i=0; i<s.size(); i++)
-    {
-        if(s[i]=='1')
-       
-          cnt++;
-           if ( s[i]=='0' and cnt)
-               ans+=(cnt+1);
-   
-           
-       
-    }
-   
     
-    cout<<ans<<endl;
-
-    
+   ll a,b,c;
+   cin>>a>>b>>c;
+   if(2*b<=c)
+   cout<<a*b<<endl; 
+   else
+   cout<<(a/2)*c+(a%2)*b<<endl;
 }
  
 int main()

@@ -24,25 +24,28 @@ using namespace std;
   
 void solve()
 {
-    string s;
-    cin>>s;
-    ll cnt=0,ans=0;
-    for (int i=0; i<s.size(); i++)
+    ll n,x;
+    cin>>n;
+   ll ans=0;
+    map<int, int>mp;
+    set<int>s;
+    for(int i=0; i<n; i++)
     {
-        if(s[i]=='1')
-       
-          cnt++;
-           if ( s[i]=='0' and cnt)
-               ans+=(cnt+1);
-   
-           
-       
+        cin>>x;
+        mp[x]++;
+        s.insert(x);
     }
-   
-    
+    for (auto xx : s)
+      {
+         if(mp[xx]>=3)
+         {
+             ans+=mp[xx]/3;
+         }
+        
+        
+         // cout<<mp[xx]<<endl;
+      }
     cout<<ans<<endl;
-
-    
 }
  
 int main()
