@@ -24,13 +24,24 @@ using namespace std;
   
 void solve()
 {
-
+     int n,m,k;
+       cin>>n>>m>>k;
+       int arra[n];
+       int arrb[m];
+       for(int i=0;i<n;i++){
+        cin>>arra[i];
+       }
+       int cnt=0;
+       for(int j=0;j<m;j++){
+        cin>>arrb[j];
+        for(int i=0;i<n;i++){
+            if(arra[i]+arrb[j]<=k){
+                cnt++;
+            }
+        }
+       }
+       cout<<cnt<<endl;
     
-   
-        ll a,b;
-        cin >> a >> b;
-        cout << max((a+b*4+14)/15,(b+1)/2) << endl;
-
 }
  
 int main()
