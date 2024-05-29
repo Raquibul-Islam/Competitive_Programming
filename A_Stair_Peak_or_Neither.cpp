@@ -32,7 +32,7 @@ void solve()
         cin>>arra[i];
        }
        int cnt=0;
-       ll ab;
+       ll ab ;
        for(int j=0;j<m;j++){
         cin>>arrb[j];
         for(int i=0;i<n;i++){
